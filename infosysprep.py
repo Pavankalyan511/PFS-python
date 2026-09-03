@@ -242,45 +242,51 @@
 
 '''Maximum sum subarray of size K(sliding window)'''
 ##n = int(input("Enter number of elements: "))
-##arr = list(map(int, input("Enter elements separated by space: ").split()))
-##k = int(input("Enter window size K: "))
-##window_sum = sum(arr[:k])
-##max_sum = window_sum
+##arr = list(map(int, input("Enter elements separated by space: ").split()))
+##k = int(input("Enter window size K: "))
+##window_sum = sum(arr[:k])
+##max_sum = window_sum
 ##for i in range(k, n):
 ##    window_sum += arr[i] - arr[i - k]
-##    max_sum = max(max_sum, window_sum)
+##    max_sum = max(max_sum, window_sum)
 ##print("Maximum sum of subarray of size K:", max_sum)
 
 '''Longest common subsequnce(LCS)'''
 ##s1 = input("Enter first string: ")
-##s2 =input("Enter second string: ")
-##m, n = len(s1), len(s2)
+##s2 =input("Enter second string: ")
+##m, n = len(s1), len(s2)
 ### dp[i][j] = length of LCS of s1[:i] and s2[:j]
-##dp = [[0] * (n + 1) for _ in range(m + 1)]
+##dp = [[0] * (n + 1) for _ in range(m + 1)]
 ##for i in range(1, m + 1):
 ##    for j in range(1, n + 1):
 ##        if s1[i - 1] == s2[j - 1]:
 ##            dp[i][j] = dp[i - 1][j - 1] + 1 # characters match, extend LCS
-##       else:
-##            dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) # take the better of skipping eithercharacter
+##       else:
+##            dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) # take the better of skipping eithercharacter
 ##print("Length of LCS:", dp[m][n])
 
 '''coin change DP'''
 ##coins = list(map(int, input().split()))
-##amount = int(input("Enter target amount: "))
+##
+##amount = int(input("Enter target amount: "))
 ### dp[a] = minimum coins needed to make amount 'a'; start with "infinity"
 ##dp = [float('inf')] * (amount + 1)
 ##dp[] = 0 # zero coins needed to make amount 0
 ##for a in range(1, amount + 1):
 ##    for coin in coins:
-##        if coin <= a:dp[a] = min(dp[a], dp[a - coin] + 1)
-##result = dp[amount] if dp[amount] != float('inf') else -1
+##        if coin <= a:
+##dp[a] = min(dp[a], dp[a - coin] + 1)
+##
+##result = dp[amount] if dp[amount] != float('inf') else -1
+
 ##print("Minimum coins required:", result)
 
 '''Balanced Paranthesis'''
 ##s = input("Enter a string of brackets: ").strip()
-##stack = []pairs = {')': '(', ']': '[', '}': '{'}
-##balanced = True
+##stack = []
+#pairs = {')': '(', ']': '[', '}': '{'}
+##
+##balanced = True
 ##for ch in s:
 ##    if ch in "([{":
 ##        stack.append(ch) # opening bracket, push onto stack
@@ -288,9 +294,11 @@
 ##        if not stack or stack[-1] != pairs[ch]:
 ##            balanced = False # mismatched or empty stack
 ##            break
-##        stack.pop()
+##        
+##stack.pop()
 ##if stack:
-##    balanced = False
+##    balanced = False
+
 ##print("YES - Balanced" if balanced else "NO - Not balanced")
 
 

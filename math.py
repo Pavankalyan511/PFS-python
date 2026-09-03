@@ -1,0 +1,10 @@
+import math as M
+print(M.ceil(10.2))
+print(M.floor(123.9))
+print(M.factorial(5))
+print(M.pow(10,2))
+print(M.fabs(-123.345))
+print(M.tan(45))
+print(M.degrees(1))
+print(M.comb(10,5))
+print(M.perm(10,2))

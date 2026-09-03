@@ -16,4 +16,4 @@
 ##print(chr(n))
 
 for i in range(65,91):
-    print(chr(i).lower(),end='')
+    cap=chr(i)
